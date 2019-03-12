@@ -9,19 +9,35 @@
   
   <properties>
  		<failOnMissingWebXml>false</failOnMissingWebXml>
-		<javax.servlet-api>3.1.0</javax.servlet-api>
-		<spring.version>4.2.0.RELEASE</spring.version>
+		<javax.servlet-api>3.0.1</javax.servlet-api>
+		<spring.version>4.3.22.RELEASE</spring.version>
 		<spring.data.version>2.1.5.RELEASE</spring.data.version>
 		<hibernate.version>5.4.1.Final</hibernate.version>
-		<logback.version>1.2.3</logback.version>
-		<ojdbc.version>12.2.0.1</ojdbc.version>
 		<junit>3.8.1</junit>
-		<nimbus-jose>7.0</nimbus-jose>
-		<aes-decryption>1.0.0</aes-decryption>
 		<jackson.version>2.9.8</jackson.version>
-		<commons.codec.version>1.12</commons.codec.version>
 	</properties>
 	<dependencies>
+	
+		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+		<dependency>
+		    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+		    <version>2.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+		<dependency>
+		    <groupId>commons-dbcp</groupId>
+		    <artifactId>commons-dbcp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-osgi -->
+<!-- <dependency>
+    <groupId>com.sun.xml.bind</groupId>
+    <artifactId>jaxb-osgi</artifactId>
+    <version>2.3.1</version>
+</dependency> -->
+
 		<!-- Spring Dependencies -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -67,6 +83,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-c3p0</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
@@ -82,6 +103,15 @@
 		      <version>3.8.1</version>
 		      <scope>test</scope>
     	</dependency>
+    	
+    	<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+		<!-- <dependency>
+		    <groupId>javax.xml.bind</groupId>
+		    <artifactId>jaxb-api</artifactId>
+		    <version>2.3.1</version>
+		    <scope>provided</scope>
+		</dependency> -->
+    	
 		
 		</dependencies>
   <build>
